@@ -1,4 +1,5 @@
 import { createEvent, createStore } from "effector";
+
 interface ITodo {
     name: string;
     checked: boolean;
@@ -8,7 +9,6 @@ interface ITodo {
 export const addTodo = createEvent<ITodo>('add todo')
 export const deleteTodo = createEvent<number>('delete todo')
 export const toggleTodo = createEvent<number>('toggle todo')
-
 
 export const $todos = createStore<ITodo[]>([])
 
